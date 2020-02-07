@@ -145,7 +145,7 @@ renew_ts <- as_tsibble(renew_parsed, key = description, index = month_sep)
 ```{r}
 renew_ts %>% autoplot(value)
 renew_ts %>% gg_subseries(value)
-renew_ts %>% gg_season(value)
+# renew_ts %>% gg_season(value)
 
 # What if gg_season() didn't work? Well we can make this with ggplot anyway!
 # Remember our other parsed version (renew parsed):
@@ -167,7 +167,7 @@ hydro_ts <- renew_ts %>%
 # Explore: 
 hydro_ts %>% autoplot(value)
 hydro_ts %>% gg_subseries(value)
-hydro_ts %>% gg_season(value)
+# hydro_ts %>% gg_season(value)
 
 # OK, what if gg_season() doesn't work?
 # It's just a function that uses ggplot() to do things we already know how to do in ggplot()!
